@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class GoogleTest {
   @Test
   public void search_selenide_in_google() {
-    open("http://google.com");
+    open("http://google.com/ncr");
     $(By.name("q")).val("selenide").pressEnter();
     $$("#ires li.g").shouldHave(size(10));
     $("#ires li.g").shouldBe(visible).shouldHave(

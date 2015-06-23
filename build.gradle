@@ -20,7 +20,7 @@ repositories{
 dependencies {
   testCompile 'junit:junit:4.12'
   testCompile 'org.hamcrest:hamcrest-all:1.3'
-  testCompile 'com.codeborne:selenide:2.18'
+  testCompile 'com.codeborne:selenide:2.19'
 }
 
 task libs(type: Sync) {
@@ -32,8 +32,8 @@ classes.dependsOn libs
 
 [compileJava, compileTestJava]*.options.collect {options -> options.encoding = 'UTF-8'}
 [compileJava, compileTestJava]*.options.collect {options -> options.debug = true}
-[compileJava, compileTestJava]*.sourceCompatibility = 1.6
-[compileJava, compileTestJava]*.targetCompatibility = 1.6
+[compileJava, compileTestJava]*.sourceCompatibility = 1.7
+[compileJava, compileTestJava]*.targetCompatibility = 1.7
 
 test {
   systemProperties = [

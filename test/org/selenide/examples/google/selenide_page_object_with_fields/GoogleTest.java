@@ -1,4 +1,4 @@
-package org.selenide.examples.google.selenide_page_object_with_fields.selenide_page_object;
+package org.selenide.examples.google.selenide_page_object_with_fields;
 
 import org.junit.Test;
 

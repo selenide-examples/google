@@ -20,7 +20,7 @@ repositories{
 dependencies {
   testCompile 'junit:junit:4.12'
   testCompile 'org.hamcrest:hamcrest-all:1.3'
-  testCompile 'com.codeborne:selenide:2.20'
+  testCompile 'com.codeborne:selenide:2.21'
 }
 
 task libs(type: Sync) {

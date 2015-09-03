@@ -6,6 +6,6 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
   public ElementsCollection getResults() {
-    return $$("#ires li.g");
+    return $$("#ires .g");
   }
 }

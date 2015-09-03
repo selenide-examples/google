@@ -13,8 +13,8 @@ public class GoogleTest {
   public void search_selenide_in_google() {
     open("http://google.com/ncr");
     $(By.name("q")).val("selenide").pressEnter();
-    $$("#ires li.g").shouldHave(size(10));
-    $("#ires li.g").shouldBe(visible).shouldHave(
+    $$("#ires .g").shouldHave(size(10));
+    $("#ires .g").shouldBe(visible).shouldHave(
         text("Selenide: concise UI tests in Java"),
         text("selenide.org"));
   }

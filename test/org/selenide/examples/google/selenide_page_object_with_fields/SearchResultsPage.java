@@ -8,7 +8,7 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.CollectionCondition.texts;
 
 public class SearchResultsPage {
-  @FindBy(css = "#ires li.g")
+  @FindBy(css = "#ires .g")
   private ElementsCollection results;
 
   public void checkResultsSize(int expectedSize) {

@@ -19,7 +19,7 @@ public class GooglePage {
   public SearchResultsPage searchFor(String text) {
     q.sendKeys(text);
     q.submit();
-    new WebDriverWait(webdriver, 4).until(visibilityOfElementLocated(By.cssSelector("#ires li.g")));
+    new WebDriverWait(webdriver, 4).until(visibilityOfElementLocated(By.cssSelector("#ires .g")));
     return PageFactory.initElements(webdriver, SearchResultsPage.class);
   }
 }

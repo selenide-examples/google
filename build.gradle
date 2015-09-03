@@ -39,6 +39,7 @@ test {
   systemProperties = [
     'file.encoding': 'UTF-8',
     'selenide.browser': 'firefox',
+    'BUILD_URL': System.getenv()['BUILD_URL'],
     'gmail.username': System.getProperty('gmail.username', "enter-your-gmail-username"),
     'gmail.password': System.getProperty('gmail.password', "enter-your-gmail-password")
   ]

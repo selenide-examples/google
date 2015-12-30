@@ -7,10 +7,16 @@ This is a sample project demonstrating how to test Google search UI with Selenid
 
 ### How to run
 
-To run Google tests, just type from command line:
+To run Google tests (in Firefox), just type from command line:
 
 ```
 ./gradle
+```
+
+To run tests in Chrome, type:
+
+```
+./gradle chrome
 ```
 
 _Feel free to share your feedback!_

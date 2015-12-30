@@ -43,3 +43,7 @@ test {
   ]
   testLogging.showStandardStreams = true
 }
+
+task chrome(type: Test) {
+  systemProperties['selenide.browser'] = 'chrome'
+}

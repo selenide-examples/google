@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,7 +15,8 @@ public class GoogleTest {
 
   @Before
   public void setUp() {
-    driver = new FirefoxDriver();
+    driver = "chrome".equals(System.getProperty("selenide.browser")) ? 
+        new ChromeDriver() : new FirefoxDriver();
   }
 
   @After

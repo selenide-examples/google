@@ -47,3 +47,9 @@ test {
 task chrome(type: Test) {
   systemProperties['selenide.browser'] = 'chrome'
 }
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.13'
+  jarFile = './gradle-wrapper/gradle-wrapper.jar'
+  scriptFile = './gradle'
+}

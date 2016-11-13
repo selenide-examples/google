@@ -20,7 +20,7 @@ repositories {
 dependencies {
   testCompile 'junit:junit:4.12'
   testCompile 'org.hamcrest:hamcrest-all:1.3'
-  testCompile 'com.codeborne:selenide:3.5.1'
+  testCompile 'com.codeborne:selenide:4.0'
 }
 
 task libs(type: Sync) {
@@ -38,18 +38,14 @@ classes.dependsOn libs
 test {
   systemProperties = [
     'file.encoding': 'UTF-8',
-    'selenide.browser': 'firefox',
+    'selenide.browser': 'chrome',
     'BUILD_URL': System.getenv()['BUILD_URL']
   ]
   testLogging.showStandardStreams = true
 }
 
-task chrome(type: Test) {
-  systemProperties['selenide.browser'] = 'chrome'
-}
-
 task wrapper(type: Wrapper) {
-  gradleVersion = '2.13'
+  gradleVersion = '3.1'
   jarFile = './gradle-wrapper/gradle-wrapper.jar'
   scriptFile = './gradle'
 }

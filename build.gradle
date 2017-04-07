@@ -45,7 +45,7 @@ test {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '3.2.1'
+  gradleVersion = '3.4.1'
   jarFile = './gradle/wrapper/gradle-wrapper.jar'
   scriptFile = './gradle'
 }

@@ -20,7 +20,7 @@ repositories {
 dependencies {
   testCompile 'junit:junit:4.12'
   testCompile 'org.hamcrest:hamcrest-all:1.3'
-  testCompile 'com.codeborne:selenide:4.8'
+  testCompile 'com.codeborne:selenide:4.10'
 }
 
 task libs(type: Sync) {
@@ -45,7 +45,7 @@ test {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '4.3.1'
+  gradleVersion = '4.4.1'
   jarFile = './gradle/wrapper/gradle-wrapper.jar'
   scriptFile = './gradle'
 }

@@ -38,10 +38,33 @@ classes.dependsOn libs
 test {
   systemProperties = [
     'file.encoding': 'UTF-8',
-    'selenide.browser': 'chrome',
     'BUILD_URL': System.getenv()['BUILD_URL']
   ]
   testLogging.showStandardStreams = true
+}
+
+task chrome(type: Test) {
+  systemProperties['selenide.browser'] = 'chrome'
+}
+
+task firefox(type: Test) {
+  systemProperties['selenide.browser'] = 'firefox'
+}
+
+task ie(type: Test) {
+  systemProperties['selenide.browser'] = 'ie'
+}
+
+task edge(type: Test) {
+  systemProperties['selenide.browser'] = 'edge'
+}
+
+task htmlunit(type: Test) {
+  systemProperties['selenide.browser'] = 'htmlunit'
+}
+
+task phantomjs(type: Test) {
+  systemProperties['selenide.browser'] = 'phantomjs'
 }
 
 task wrapper(type: Wrapper) {

@@ -5,18 +5,30 @@ This is a sample project demonstrating how to test Google search UI with Selenid
 
 **You can checkout and run it locally with a few minutes.**
 
-### How to run
+### How to run with Gradle
 
-To run Google tests (in Firefox), just type from command line:
-
-```
-./gradle
-```
-
-To run tests in Chrome, type:
+Type from command line for running tests in different browsers:
 
 ```
 ./gradle chrome
+./gradle firefox
+./gradle ie
+./gradle edge
+./gradle htmlunit
+./gradle phantomjs
+```
+
+### How to run with Maven
+
+Type from command line for running tests in different browsers:
+
+```
+mvn clean test -P chrome
+mvn clean test -P firefox
+mvn clean test -P ie
+mvn clean test -P edge
+mvn clean test -P phantomjs
+mvn clean test -P htmlunit
 ```
 
 _Feel free to share your feedback!_

@@ -16,6 +16,7 @@ Type from command line for running tests in different browsers:
 ./gradle edge
 ./gradle htmlunit
 ./gradle phantomjs
+./gradle safari
 ```
 
 ### How to run with Maven
@@ -29,6 +30,7 @@ mvn clean test -P ie
 mvn clean test -P edge
 mvn clean test -P phantomjs
 mvn clean test -P htmlunit
+mvn clean test -P safari
 ```
 
 _Feel free to share your feedback!_

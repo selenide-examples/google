@@ -11,7 +11,7 @@ public class GoogleTest {
     GooglePage page = open("https://google.com/ncr", GooglePage.class);
     SearchResultsPage results = page.searchFor("selenide");
     
-    results.checkResultsSize(10);
+    results.checkResultsSize(1);
     results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
   }
 }

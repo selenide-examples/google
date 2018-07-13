@@ -1,21 +1,17 @@
 package org.selenide.examples.google.selenide_page_object_with_fields;
 
-import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.*;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
-  @FindBy(css = "#ires .g")
-  private ElementsCollection results;
+  private ElementsCollection results = $$("#ires .g");
 
-  public void checkResultsSize(int expectedSize) {
-    results.shouldHave(sizeGreaterThan(expectedSize));
-  }
-  
-  public void checkResults(String... expectedTexts) {
-    results.shouldHave(texts(expectedTexts));
+  public SelenideElement getResult(int index) {
+    return results.get(index);
   }
   
   public ElementsCollection getResults() {

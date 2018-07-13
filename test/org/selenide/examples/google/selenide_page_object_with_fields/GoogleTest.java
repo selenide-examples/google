@@ -2,16 +2,19 @@ package org.selenide.examples.google.selenide_page_object_with_fields;
 
 import org.junit.Test;
 
+
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GoogleTest {
   @Test
   public void userCanSearch() {
-    GooglePage page = open("https://google.com/ncr", GooglePage.class);
-    SearchResultsPage results = page.searchFor("selenide");
-    
-    results.checkResultsSize(1);
-    results.getResults().get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+    open("https://google.com/ncr");
+    new GooglePage().searchFor("selenide");
+
+    SearchResultsPage results = new SearchResultsPage();
+    results.getResults().shouldHave(sizeGreaterThan(1));
+    results.getResult(0).shouldHave(text("Selenide: concise UI tests in Java"));
   }
 }

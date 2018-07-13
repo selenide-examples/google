@@ -1,10 +1,9 @@
-package org.selenide.examples.google.selenide_page_object_with_fields;
+package org.selenide.examples.google.selenide_page_object_with_assertions;
 
 import com.codeborne.selenide.*;
 
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
+import static com.codeborne.selenide.Selenide.*;
 
 public class GooglePage {
   private SelenideElement searchField = $(byName("q"));

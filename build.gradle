@@ -74,9 +74,3 @@ task phantomjs(type: Test) {
 task safari(type: Test) {
   systemProperties['selenide.browser'] = 'safari'
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '4.4.1'
-  jarFile = './gradle/wrapper/gradle-wrapper.jar'
-  scriptFile = './gradle'
-}

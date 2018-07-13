@@ -20,8 +20,10 @@ repositories {
 dependencies {
   testCompile 'junit:junit:4.12'
   testCompile 'org.hamcrest:hamcrest-all:1.3'
-  testCompile 'com.codeborne:selenide:4.10.01'
-  testCompile 'org.seleniumhq.selenium:selenium-safari-driver:3.8.1'
+  testCompile 'com.codeborne:selenide:4.12.2'
+  testCompile('org.seleniumhq.selenium:selenium-safari-driver:3.13.0') { transitive = false }
+  testCompile('org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0') { transitive = false }
+  testCompile('com.codeborne:phantomjsdriver:1.4.4') { transitive = false }
 }
 
 task libs(type: Sync) {
@@ -48,10 +50,12 @@ tasks.withType(Test).all { testTask ->
 
 task chrome(type: Test) {
   systemProperties['selenide.browser'] = 'chrome'
+  systemProperties['selenide.headless'] = 'true'
 }
 
 task firefox(type: Test) {
   systemProperties['selenide.browser'] = 'firefox'
+  systemProperties['selenide.headless'] = 'true'
 }
 
 task ie(type: Test) {

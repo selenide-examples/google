@@ -10,13 +10,13 @@ This is a sample project demonstrating how to test Google search UI with Selenid
 Type from command line for running tests in different browsers:
 
 ```
-./gradle chrome
-./gradle firefox
-./gradle ie
-./gradle edge
-./gradle htmlunit
-./gradle phantomjs
-./gradle safari
+./gradlew chrome
+./gradlew firefox
+./gradlew ie
+./gradlew edge
+./gradlew htmlunit
+./gradlew phantomjs
+./gradlew safari
 ```
 
 ### How to run with Maven

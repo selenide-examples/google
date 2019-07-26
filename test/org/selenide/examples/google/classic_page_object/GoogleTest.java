@@ -14,7 +14,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.hamcrest.CoreMatchers.startsWith;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
 public class GoogleTest {
@@ -57,6 +57,6 @@ public class GoogleTest {
     driver.get("https://www.google.com/ncr");
     GooglePage page = PageFactory.initElements(driver, GooglePage.class);
     SearchResultsPage results = page.searchFor("Selenide");
-    assertThat(results.getResults().get(0).getText(), startsWith("Selenide: concise UI tests in Java"));
+    assertThat(results.getResults().get(0).getText(), containsString("Selenide: concise UI tests in Java"));
   }
 }

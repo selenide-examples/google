@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SearchResultsPage {
-  private ElementsCollection results = $$("#ires .g");
+  private ElementsCollection results = $$("#res .g");
 
   public void checkResultsSizeIsAtLeast(int expectedSize) {
     results.shouldHave(sizeGreaterThan(expectedSize));

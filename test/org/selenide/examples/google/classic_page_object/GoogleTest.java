@@ -8,14 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GoogleTest {
   WebDriver driver;
@@ -29,9 +27,6 @@ public class GoogleTest {
     } else if ("firefox".equals(currentBrowser)) {
       WebDriverManager.firefoxdriver().setup();
       driver = new FirefoxDriver();
-    } else if ("phantomjs".equals(currentBrowser)) {
-      WebDriverManager.phantomjs().setup();
-      driver = new PhantomJSDriver();
     } else if ("safari".equals(currentBrowser)) {
       driver = new SafariDriver();
     } else if ("edge".equals(currentBrowser)) {
@@ -40,8 +35,6 @@ public class GoogleTest {
     } else if ("ie".equals(currentBrowser)) {
       WebDriverManager.iedriver().setup();
       driver = new InternetExplorerDriver();
-    } else if ("htmlunit".equals(currentBrowser)) {
-      driver = new HtmlUnitDriver();
     }
   }
 

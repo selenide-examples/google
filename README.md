@@ -43,3 +43,5 @@ The project contains tests in different styles:
  * without page object (selenide_straightforward)
  * with classic _Selenium_ page object
  * with _Selenide_-style page object
+
+[![Build Status](https://travis-ci.org/selenide-examples/google.png)](https://travis-ci.org/selenide-examples/google)

@@ -33,13 +33,13 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.codeborne</groupId>
       <artifactId>selenide</artifactId>
-      <version>5.18.0</version>
+      <version>5.22.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>

@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class GoogleTest {
   @Test
   public void userCanSearch() {
-    open("https://google.com/ncr");
+    open("https://duckduckgo.com");
     new GooglePage().searchFor("selenide");
 
     SearchResultsPage results = new SearchResultsPage();

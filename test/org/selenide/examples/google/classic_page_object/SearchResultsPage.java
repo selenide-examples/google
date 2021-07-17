@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class SearchResultsPage {
-  @FindBy(css = "#res .g")
+  @FindBy(css = ".results .result")
   private List<WebElement> results;
 
   public List<WebElement> getResults() {

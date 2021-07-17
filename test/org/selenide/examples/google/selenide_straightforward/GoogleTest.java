@@ -17,10 +17,10 @@ public class GoogleTest {
 
   @Test
   public void search_selenide_in_google() {
-    open("https://google.com/ncr");
+    open("https://duckduckgo.com");
     $(By.name("q")).val("selenide").pressEnter();
-    $$("#res .g").shouldHave(sizeGreaterThan(1));
-    $("#res .g").shouldBe(visible).shouldHave(
+    $$(".results .result").shouldHave(sizeGreaterThan(1));
+    $(".results .result").shouldBe(visible).shouldHave(
         text("Selenide: concise UI tests in Java"),
         text("selenide.org"));
   }

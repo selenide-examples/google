@@ -16,7 +16,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GoogleTest {
-  WebDriver driver;
+  private WebDriver driver;
 
   @Before
   public void setUp() {
@@ -47,7 +47,7 @@ public class GoogleTest {
 
   @Test
   public void userCanSearch() {
-    driver.get("https://www.google.com/ncr");
+    driver.get("https://www.duckduckgo.com");
     GooglePage page = PageFactory.initElements(driver, GooglePage.class);
     SearchResultsPage results = page.searchFor("Selenide");
     assertThat(results.getResults().get(0).getText(), containsString("Selenide: concise UI tests in Java"));

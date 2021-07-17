@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
   public ElementsCollection getResults() {
-    return $$("#res .g");
+    return $$(".results .result");
   }
   public SelenideElement getResult(int index) {
-    return $("#res .g", index);
+    return $("#r1-" + index);
   }
 }

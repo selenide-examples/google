@@ -22,7 +22,7 @@ repositories {
 dependencies {
   testImplementation 'junit:junit:4.13.2'
   testImplementation 'org.hamcrest:hamcrest-all:1.3'
-  testImplementation 'com.codeborne:selenide:5.23.1'
+  testImplementation 'com.codeborne:selenide:5.24.0'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:3.141.59') { transitive = false }
   testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.32'
 }

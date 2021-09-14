@@ -49,7 +49,7 @@ public class GoogleTest {
   public void userCanSearch() {
     driver.get("https://www.duckduckgo.com");
     GooglePage page = PageFactory.initElements(driver, GooglePage.class);
-    SearchResultsPage results = page.searchFor("Selenide");
+    SearchResultsPage results = page.searchFor("Selenide java");
     assertThat(results.getResults().get(0).getText(), containsString("Selenide: concise UI tests in Java"));
   }
 }

@@ -18,7 +18,7 @@ public class GoogleTest {
   @Test
   public void search_selenide_in_google() {
     open("https://duckduckgo.com");
-    $(By.name("q")).val("selenide").pressEnter();
+    $(By.name("q")).val("selenide java").pressEnter();
     $$(".results .result").shouldHave(sizeGreaterThan(1));
     $(".results .result").shouldBe(visible).shouldHave(
         text("Selenide: concise UI tests in Java"),

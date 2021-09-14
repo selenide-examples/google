@@ -10,7 +10,7 @@ public class GoogleTest {
   @Test
   public void userCanSearch() {
     open("https://duckduckgo.com");
-    new GooglePage().searchFor("selenide");
+    new GooglePage().searchFor("selenide java");
 
     SearchResultsPage results = new SearchResultsPage();
     results.getResults().shouldHave(sizeGreaterThan(1));

@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
   testImplementation 'junit:junit:4.13.2'
-  testImplementation 'com.codeborne:selenide-junit4:6.12.3'
+  testImplementation 'com.codeborne:selenide-junit4:6.12.4'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.8.1') { transitive = false }
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.7'
 }

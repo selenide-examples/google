@@ -1,6 +1,5 @@
 package org.selenide.examples.google.classic_page_object;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,18 +21,14 @@ public class GoogleTest {
   public void setUp() {
     String currentBrowser = System.getProperty("selenide.browser", "firefox");
     if ("chrome".equals(currentBrowser)) {
-      WebDriverManager.chromedriver().setup();
       driver = new ChromeDriver();
     } else if ("firefox".equals(currentBrowser)) {
-      WebDriverManager.firefoxdriver().setup();
       driver = new FirefoxDriver();
     } else if ("safari".equals(currentBrowser)) {
       driver = new SafariDriver();
     } else if ("edge".equals(currentBrowser)) {
-      WebDriverManager.edgedriver().setup();
       driver = new EdgeDriver();
     } else if ("ie".equals(currentBrowser)) {
-      WebDriverManager.iedriver().setup();
       driver = new InternetExplorerDriver();
     }
   }

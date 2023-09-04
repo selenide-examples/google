@@ -24,7 +24,7 @@ dependencies {
   testImplementation 'com.codeborne:selenide-junit4:6.17.2'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.12.0') { transitive = false }
   testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
-  testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.7'
+  testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.9'
 }
 
 [compileJava, compileTestJava]*.options.collect {options -> options.encoding = 'UTF-8'}

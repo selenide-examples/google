@@ -25,8 +25,8 @@
   </build>
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -39,7 +39,7 @@
     <dependency>
       <groupId>com.codeborne</groupId>
       <artifactId>selenide-junit4</artifactId>
-      <version>6.19.1</version>
+      <version>7.0.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>

@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
-  private final ElementsCollection results = $$(".results .result");
+  private final ElementsCollection results = $$("[data-testid=\"result\"]");
 
   public SelenideElement getResult(int index) {
     return results.get(index);

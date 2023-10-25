@@ -21,7 +21,7 @@ public class GooglePage {
   public SearchResultsPage searchFor(String text) {
     q.sendKeys(text);
     q.submit();
-    new WebDriverWait(webdriver, Duration.ofSeconds(8)).until(visibilityOfElementLocated(By.cssSelector(".results .result")));
+    new WebDriverWait(webdriver, Duration.ofSeconds(8)).until(visibilityOfElementLocated(By.cssSelector("[data-testid=\"result\"]")));
     return PageFactory.initElements(webdriver, SearchResultsPage.class);
   }
 }

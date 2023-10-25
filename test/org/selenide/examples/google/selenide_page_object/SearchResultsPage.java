@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
   public ElementsCollection getResults() {
-    return $$(".results .result");
+    return $$("[data-testid=\"result\"]");
   }
   public SelenideElement getResult(int index) {
     return $("#r1-" + index);

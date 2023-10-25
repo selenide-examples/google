@@ -19,8 +19,8 @@ public class GoogleTest {
   public void search_selenide_in_google() {
     open("https://duckduckgo.com");
     $(By.name("q")).val("selenide java").pressEnter();
-    $$(".results .result").shouldHave(sizeGreaterThan(1));
-    $(".results .result").shouldBe(visible).shouldHave(
+    $$("[data-testid=\"result\"]").shouldHave(sizeGreaterThan(1));
+    $("[data-testid=\"result\"]").shouldBe(visible).shouldHave(
         text("Selenide: concise UI tests in Java"),
         text("selenide.org"));
   }

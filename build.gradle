@@ -23,7 +23,7 @@ dependencies {
   testImplementation 'junit:junit:4.13.2'
   testImplementation 'com.codeborne:selenide-junit4:7.0.4'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.16.1') { transitive = false }
-  testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.0'
+  testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.1'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.10'
 }
 

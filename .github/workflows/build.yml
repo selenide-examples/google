@@ -22,7 +22,7 @@ jobs:
         distribution: 'temurin'
         cache: 'gradle'
     - name: Compile
-      uses: gradle/gradle-build-action@v2
+      uses: gradle/gradle-build-action@v3
       with:
         arguments: testClasses
 

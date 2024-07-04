@@ -9,11 +9,19 @@ This is a sample project demonstrating how to test Google search UI with Selenid
 
 Type from command line for running tests in different browsers:
 
-```
+```bash
 ./gradlew chrome
+```
+```bash
 ./gradlew firefox
+```
+```bash
 ./gradlew ie
+```
+```bash
 ./gradlew edge
+```
+```bash
 ./gradlew safari
 ```
 
@@ -21,12 +29,20 @@ Type from command line for running tests in different browsers:
 
 Type from command line for running tests in different browsers:
 
+```bash
+./mvnw clean test -P chrome
 ```
-mvn clean test -P chrome
-mvn clean test -P firefox
-mvn clean test -P ie
-mvn clean test -P edge
-mvn clean test -P safari
+```bash
+./mvnw clean test -P firefox
+```
+```bash
+./mvnw clean test -P ie
+```
+```bash
+./mvnw clean test -P edge
+```
+```bash
+./mvnw clean test -P safari
 ```
 
 _Feel free to share your feedback!_

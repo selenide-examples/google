@@ -1,6 +1,6 @@
 package org.selenide.examples.google.selenide_page_object;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;

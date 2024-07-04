@@ -31,14 +31,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.codeborne</groupId>
-      <artifactId>selenide-junit4</artifactId>
+      <artifactId>selenide</artifactId>
       <version>7.3.3</version>
       <scope>test</scope>
     </dependency>

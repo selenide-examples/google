@@ -22,7 +22,7 @@ repositories {
 dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter:5.11.3'
   testImplementation 'com.codeborne:selenide:7.6.0'
-  testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.26.0') { transitive = false }
+  testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.27.0') { transitive = false }
   testImplementation 'org.assertj:assertj-core:3.26.3'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
 }

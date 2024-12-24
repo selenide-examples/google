@@ -27,6 +27,15 @@ jobs:
       run: ./gradlew testClasses --no-daemon --console=plain
     - name: Run tests
       run: ./gradlew test --no-daemon --console=plain
+    - name: Upload test report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-report-gradle
+        retention-days: 14
+        path: |
+          **/build/reports
+          **/build/test-results
 
   build-with-maven:
 
@@ -40,10 +49,19 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Build with Maven
+      - name: Compile
         run: mvn test-compile
       - name: Run tests
         run: mvn test
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-report-maven
+          retention-days: 14
+          path: |
+            **/build
+            **/target/surefire-reports
 
   auto-merge-dependabot:
     name: 🤖 Auto merge dependabot PR

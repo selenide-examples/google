@@ -1,2 +1,3 @@
 com.codeborne.selenide.junit5.TextReportExtension
 com.codeborne.selenide.junit5.ScreenShooterExtension
+org.selenide.videorecorder.junit5.VideoRecorderExtension

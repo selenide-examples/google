@@ -5,7 +5,7 @@
   <groupId>org.selenide.examples</groupId>
   <artifactId>google</artifactId>
   <version>1.0-SNAPSHOT</version>
-  
+
   <build>
     <defaultGoal>clean dependency:copy-dependencies test</defaultGoal>
     <sourceDirectory>src</sourceDirectory>
@@ -38,7 +38,7 @@
     </dependency>
     <dependency>
       <groupId>com.codeborne</groupId>
-      <artifactId>selenide</artifactId>
+      <artifactId>selenide-video-recorder</artifactId>
       <version>7.6.1</version>
       <scope>test</scope>
     </dependency>

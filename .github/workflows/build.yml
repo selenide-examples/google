@@ -12,9 +12,16 @@ jobs:
   build-with-gradle:
 
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        gradle-task: [ 'chrome', 'firefox' ]
 
     steps:
     - uses: actions/checkout@v4
+    - name: Setup Firefox
+      if: ${{ matrix.gradle-task == 'firefox' }}
+      uses: browser-actions/setup-firefox@latest
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -26,12 +33,12 @@ jobs:
     - name: Compile
       run: ./gradlew testClasses --no-daemon --console=plain
     - name: Run tests
-      run: ./gradlew chrome --no-daemon --console=plain -Dselenide.headless=true
+      run: ./gradlew ${{matrix.gradle-task}} --no-daemon --console=plain -Dselenide.headless=true
     - name: Upload test report
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: test-report-gradle
+        name: test-report-gradle-${{matrix.gradle-task}}
         retention-days: 14
         path: |
           **/build/reports
@@ -40,9 +47,16 @@ jobs:
   build-with-maven:
 
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        gradle-task: [ 'chrome', 'firefox' ]
 
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Firefox
+        if: ${{ matrix.gradle-task == 'firefox' }}
+        uses: browser-actions/setup-firefox@latest
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -52,12 +66,12 @@ jobs:
       - name: Compile
         run: mvn test-compile
       - name: Run tests
-        run: mvn test -P chrome
+        run: mvn test -P ${{matrix.gradle-task}}
       - name: Upload test report
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-report-maven
+          name: test-report-maven-${{matrix.gradle-task}}
           retention-days: 14
           path: |
             **/build

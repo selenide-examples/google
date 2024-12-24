@@ -39,8 +39,16 @@ dependencies {
 tasks.withType(Test).configureEach { testTask ->
   testTask.systemProperties = [
     'file.encoding': 'UTF-8',
-    'BUILD_URL': System.getenv()['BUILD_URL']
+    'user.country': 'TR',
+    'user.language': 'tr'
   ]
+  System.properties.stringPropertyNames()
+    .findAll { it.startsWith("selenide.") }
+    .forEach {
+      println " set ${it} to ${System.getProperty(it)}"
+      systemProperties[it] = System.getProperty(it)
+    }
+  jvmArgs = ['-ea', '-Xmx512m']
   testTask.testLogging.showStandardStreams = true
   testTask.exclude 'org/selenide/examples/google/classic_page_object/**/*'
   testTask.outputs.upToDateWhen { false }

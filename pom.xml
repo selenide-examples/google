@@ -111,6 +111,7 @@
             <configuration>
               <systemPropertyVariables>
                 <selenide.browser>edge</selenide.browser>
+                <selenide.headless>true</selenide.headless>
               </systemPropertyVariables>
             </configuration>
           </plugin>
@@ -152,6 +153,7 @@
               </excludes>
               <systemPropertyVariables>
                 <selenide.browser>safari</selenide.browser>
+                <selenide.headless>true</selenide.headless>
               </systemPropertyVariables>
             </configuration>
           </plugin>

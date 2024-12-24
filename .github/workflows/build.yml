@@ -25,6 +25,8 @@ jobs:
       uses: gradle/actions/setup-gradle@v4
     - name: Compile
       run: ./gradlew testClasses --no-daemon --console=plain
+    - name: Run tests
+      run: ./gradlew test --no-daemon --console=plain
 
   build-with-maven:
 
@@ -40,6 +42,8 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn test-compile
+      - name: Run tests
+        run: mvn test
 
   auto-merge-dependabot:
     name: 🤖 Auto merge dependabot PR
@@ -52,7 +56,7 @@ jobs:
       contents: write
     steps:
       - name: 🤖 Merge PR from dependabot
-        uses: fastify/github-action-merge-dependabot@v3.11.0
+        uses: fastify/github-action-merge-dependabot@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           target: minor

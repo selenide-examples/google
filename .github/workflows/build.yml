@@ -26,7 +26,7 @@ jobs:
     - name: Compile
       run: ./gradlew testClasses --no-daemon --console=plain
     - name: Run tests
-      run: ./gradlew test --no-daemon --console=plain -Dselenide.headless=true
+      run: ./gradlew chrome --no-daemon --console=plain -Dselenide.headless=true
     - name: Upload test report
       uses: actions/upload-artifact@v4
       if: always()
@@ -52,7 +52,7 @@ jobs:
       - name: Compile
         run: mvn test-compile
       - name: Run tests
-        run: mvn test
+        run: mvn test -P chrome
       - name: Upload test report
         uses: actions/upload-artifact@v4
         if: always()

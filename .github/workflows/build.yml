@@ -21,10 +21,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: 'gradle'
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
     - name: Compile
-      uses: gradle/gradle-build-action@v3
-      with:
-        arguments: testClasses
+      run: ./gradlew testClasses --no-daemon --console=plain
 
   build-with-maven:
 

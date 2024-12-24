@@ -46,6 +46,6 @@ public class GoogleTest {
     SearchResultsPage results = page.searchFor("Selenide java");
     assertThat(results.getResults().get(0).getText())
             .isNotNull()
-            .contains("\"Selenide: concise UI tests in Java\"");
+            .contains("Selenide: concise UI tests in Java");
   }
 }

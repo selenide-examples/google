@@ -29,7 +29,6 @@ dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
   testImplementation 'com.codeborne:selenide-video-recorder:7.7.0'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.28.0') { transitive = false }
-  testImplementation 'org.assertj:assertj-core:3.27.2'
   testImplementation 'org.assertj:assertj-core:3.27.3'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
 }

@@ -25,10 +25,19 @@ repositories {
   mavenCentral()
 }
 
+ext {
+  junitVersion = '5.12.0'
+  junitPlatformVersion = '1.12.0'
+}
+
 dependencies {
-  testImplementation 'org.junit.jupiter:junit-jupiter:5.12.0'
+  testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+  testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+  testImplementation "org.junit.platform:junit-platform-engine:$junitPlatformVersion"
+  testImplementation "org.junit.platform:junit-platform-launcher:$junitPlatformVersion"
+
   testImplementation 'com.codeborne:selenide-video-recorder:7.7.2'
-  testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.29.0') { transitive = false }
+  testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.28.1') { transitive = false }
   testImplementation 'org.assertj:assertj-core:3.27.3'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
 }

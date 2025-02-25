@@ -39,7 +39,7 @@ dependencies {
   testImplementation 'com.codeborne:selenide-video-recorder:7.7.3'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.29.0') { transitive = false }
   testImplementation 'org.assertj:assertj-core:3.27.3'
-  testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
+  testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.17'
 }
 
 [compileJava, compileTestJava]*.options.collect {options -> options.encoding = 'UTF-8'}

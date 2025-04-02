@@ -36,7 +36,7 @@ dependencies {
   testRuntimeOnly "org.junit.platform:junit-platform-engine:$junitPlatformVersion"
   testRuntimeOnly "org.junit.platform:junit-platform-launcher:$junitPlatformVersion"
 
-  testImplementation 'com.codeborne:selenide-video-recorder:7.7.3'
+  testImplementation 'com.codeborne:selenide-video-recorder:7.8.0'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.30.0') { transitive = false }
   testImplementation 'org.assertj:assertj-core:3.27.3'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'

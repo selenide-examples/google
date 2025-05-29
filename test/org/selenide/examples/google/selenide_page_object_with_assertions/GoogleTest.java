@@ -2,7 +2,7 @@ package org.selenide.examples.google.selenide_page_object_with_assertions;
 
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
 
 public class GoogleTest {
   @Test

@@ -71,9 +71,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
-              <excludes>
-                <exclude>**/classic_page_object/*</exclude>
-              </excludes>
               <systemPropertyVariables>
                 <selenide.browser>chrome</selenide.browser>
                 <selenide.headless>true</selenide.headless>
@@ -127,9 +124,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
-              <excludes>
-                <exclude>**/classic_page_object/*</exclude>
-              </excludes>
               <systemPropertyVariables>
                 <selenide.browser>firefox</selenide.browser>
                 <selenide.headless>true</selenide.headless>
@@ -148,9 +142,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
-              <excludes>
-                <exclude>**/classic_page_object/*</exclude>
-              </excludes>
               <systemPropertyVariables>
                 <selenide.browser>safari</selenide.browser>
                 <selenide.headless>true</selenide.headless>

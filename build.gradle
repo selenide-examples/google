@@ -59,7 +59,6 @@ tasks.withType(Test).configureEach { testTask ->
     }
   jvmArgs = ['-ea', '-Xmx512m']
   testTask.testLogging.showStandardStreams = true
-  testTask.exclude 'org/selenide/examples/google/classic_page_object/**/*'
   testTask.outputs.upToDateWhen { false }
   testTask.useJUnitPlatform()
 }

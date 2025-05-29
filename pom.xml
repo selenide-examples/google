@@ -73,7 +73,7 @@
             <configuration>
               <systemPropertyVariables>
                 <selenide.browser>chrome</selenide.browser>
-                <selenide.headless>true</selenide.headless>
+<!--                <selenide.headless>true</selenide.headless>-->
               </systemPropertyVariables>
             </configuration>
           </plugin>
@@ -126,7 +126,7 @@
             <configuration>
               <systemPropertyVariables>
                 <selenide.browser>firefox</selenide.browser>
-                <selenide.headless>true</selenide.headless>
+<!--                <selenide.headless>true</selenide.headless>-->
               </systemPropertyVariables>
             </configuration>
           </plugin>

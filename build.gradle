@@ -38,7 +38,7 @@ dependencies {
 
   testImplementation 'com.codeborne:selenide-video-recorder:7.9.4'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.34.0') { transitive = false }
-  testImplementation 'org.assertj:assertj-core:3.27.3'
+  testImplementation 'org.assertj:assertj-core:3.27.4'
   testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
 }
 

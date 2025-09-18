@@ -61,6 +61,8 @@ tasks.withType(Test).configureEach { testTask ->
   testTask.testLogging.showStandardStreams = true
   testTask.outputs.upToDateWhen { false }
   testTask.useJUnitPlatform()
+  testTask.testClassesDirs = testing.suites.test.sources.output.classesDirs
+  testTask.classpath = testing.suites.test.sources.runtimeClasspath
 }
 
 tasks.register("chrome", Test) {

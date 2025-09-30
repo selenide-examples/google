@@ -27,14 +27,13 @@ repositories {
 
 ext {
   junitVersion = '6.0.0'
-  junitPlatformVersion = '6.0.0'
 }
 
 dependencies {
   testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
   testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
-  testRuntimeOnly "org.junit.platform:junit-platform-engine:$junitPlatformVersion"
-  testRuntimeOnly "org.junit.platform:junit-platform-launcher:$junitPlatformVersion"
+  testRuntimeOnly "org.junit.platform:junit-platform-engine:$junitVersion"
+  testRuntimeOnly "org.junit.platform:junit-platform-launcher:$junitVersion"
 
   testImplementation 'com.codeborne:selenide-video-recorder:7.10.1'
   testImplementation('org.seleniumhq.selenium:selenium-safari-driver:4.35.0') { transitive = false }

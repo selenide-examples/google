@@ -22,7 +22,7 @@ jobs:
         gradle-task: [ 'chrome', 'firefox' ]
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Setup Firefox
       if: ${{ matrix.gradle-task == 'firefox' }}
       uses: browser-actions/setup-firefox@latest
@@ -63,7 +63,7 @@ jobs:
         gradle-task: [ 'chrome', 'firefox' ]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Setup Firefox
         if: ${{ matrix.gradle-task == 'firefox' }}
         uses: browser-actions/setup-firefox@latest

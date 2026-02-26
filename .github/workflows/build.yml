@@ -45,7 +45,7 @@ jobs:
       with:
         run: ./gradlew ${{matrix.gradle-task}} --no-daemon --console=plain
     - name: Upload test report
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       if: always()
       with:
         name: test-report-gradle-${{matrix.gradle-task}}
@@ -84,7 +84,7 @@ jobs:
         with:
           run: mvn test -P ${{matrix.gradle-task}}
       - name: Upload test report
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test-report-maven-${{matrix.gradle-task}}
